@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{centernot}
+
+\begin{document}
+
+\title{M328K\: Homework 6}
+\author{Joshua Dong}
+\date{\today}
+\maketitle
+
+
+2(e), 14(b,d), 16, 18 
+
+% 4.2, problem 2(e)
+\subsection{4.2.2.e}
+Find all solutions to $128x \equiv 833 \pmod{1001}$
+\\
+\\$(128, 1001) = (128, 1001-8(128)) = (128, -23) = 1$
+\\$\therefore$ there is exactly one unique solution mod 1001.
+\\$128x - 1001q = 1
+\\1001 + (-8)128 = -23
+\\128 + (5)((1)1001 + (-8)128) = 13
+\\(1)1001 + (-8)128 + (2)((1)128 + (5)((1)1001 + (-8)128)) = 3
+\\(128 + (5)((1)1001 + (-8)128)) + (-4)((1)1001 + (-8)128 + (2)((1)128 + (5)((1)1001 + (-8)128))) = 1
+\\128 + (5)1001 + (-40)128 + (-4)1001 + (32)128 + (-8)128 + (-40)1001 + (320)128 = 1
+\\(-39)1001 + (305)128 = 1
+\\\therefore \bar{128}=305$.
+\\$\bar{128}(128x) \equiv \bar{128}(833) \pmod{1001}$.
+\\$\therefore x \equiv 305(833) \equiv 812 \pmod{1001}$
+\\$\therefore x \in S$ such that $S = \{n \mid n = 812 + 1001k$\;\;$ \forall k \in \mathbb{Z}\}$.
+
+\subsection{4.2.14.b}
+$2x + 4y \equiv 6 \pmod{8}$
+\\
+\\$x + 2y \equiv 3 \pmod{4}$
+\\$(1, 2, 4) \mid 3$
+\\$4n = (x + 2y - 3)$ for some $n \in \mathbb{Z}$.
+\\$(x + 2y - 4n) = 3$.
+\\Let k be some integer where $2k = (2y - 4n)$.
+\\Then $(x + 2k) = 3$.
+\\By observation, we see that one solution is $x=3,\,k=0$.
+\\All solutions to the previous equation then are expressible in the form:
+\\$x=3-2t, k=t$\;\;$\forall t \in \mathbb{Z}$.
+\\Now we solve $2k = (2y - 4n)$.
+\\$k = (y - 2n)$.
+\\First we solve $y-2n = 1$
+\\By observation, we see that one solution is:
+\\$y=3, n=1$
+\\So the solution to $k = (y - 2n)$ is:
+\\$y=3k+2s, n=k-s$\;\;$\forall s \in \mathbb{Z}$.
+\\$\therefore x=3-2t, y=3t+2s$\;\;$\forall s,t \in \mathbb{Z}$ represent all the solutions to $x + 2y \equiv 3 \pmod{4}$.
+
+\subsection{4.2.14.d}
+$10x + 5y \equiv 9 \pmod{15}$
+\\
+\\$(10, 5, 15) \nmid 9$
+\\Thus, there are no solutions.
+
+\subsection{4.2.16}
+Show $x^2 \equiv 1 \pmod{2^k}$ has exactly four unique solutions: $\pm1, \pm(1+2^{k-1})$ when $k>2$. Show that when $k \equiv 1$, there is one solution, and that when $k \equiv 2$ there are two solutions.
+\\
+
+\subsection{4.2.18}
+a
+\\
+
+
+\end{document}
