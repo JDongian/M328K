@@ -114,9 +114,17 @@ Show $x^2 \equiv 1 \pmod{2^k}$ has exactly four unique solutions: $\pm1, \pm(1+2
 \\$\therefore x \in S$ where $S = \{x$ such that $x \equiv 2^{k-1}+1 \pmod{2^k}$ or $x \equiv 2^{k-1}-1 \pmod{2^k}$\;\;$\forall k \in \mathbb{Z}, k>2\}$ provides all solutions where $m \neq 0$.
 \\$\therefore$ In the general case where $m \in \mathbb{Z}$, $x \in S$ where $S = \{x$ such that $x=-1$ or $x=1$ or $x \equiv 2^{k-1}+1 \pmod{2^k}$ or $x \equiv 2^{k-1}-1 \pmod{2^k}$\;\;$\forall k \in \mathbb{Z}, k>2\}$ provides all solutions where $m \neq 0$.
 
+\newpage
 \subsection{4.2.18}
-a
+$p \in \textbf{P}, p>2, a \in \mathbb{Z^+}, a \perp p \rightarrow x^2 \equiv a \pmod{p}$ has 0 or 2 unique solutions.
 \\
+\\Since $a \equiv 1 \pmod{p}$,
+\\$p \mid (a - 1)$
+\\$p \mid (x^2 - 1)$
+\\$p \mid (x+1)(x-1)$.
+\\$\therefore x+1$ or $x-1$ must divide p.
+\\$p \mid (x+1) \rightarrow p \nmid (x-1)$ and $p \mid (x-1) \rightarrow p \nmid (x+1)$
+\\$\therefore$ there are two unique solutions $\mod p$: $x \equiv p-1$ and $x \equiv 1$.
 
 
 \end{document}
