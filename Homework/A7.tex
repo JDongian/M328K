@@ -20,22 +20,95 @@ Find $x\in\mathbb{Z}$ such that\
 \\$x\equiv9\pmod{11}$, and
 \\$x\equiv0\pmod{13}$.
 \\
+\\Using the first congruence,
+\\Let $q \in \mathbb{Z}$ where $x=10q+9$.
+\\Substituting into the second congruence,
+\\$10q + 9 \equiv 9 \pmod{11}$.
+\\It follows that $10q \equiv 0 \pmod{11}$,
+\\$q \equiv 0 \pmod{11}$.
+\\Let $r \in \mathbb{Z}$ where $q=11r+0$.
+\\Now we have $x=10(11r)+9=110r+9$.
+\\Substituting into the third congruence,
+\\$110r + 9 \equiv 0 \pmod{13}$.
+\\It follows that $110r \equiv 4 \pmod{13}$,
+\\$6r \equiv 4 \pmod{13}$,
+\\$r \equiv (\bar{6})(4) \equiv 44 \equiv 5 \pmod{13}$.
+\\Let $s \in \mathbb{Z}$ where $r=13s+5$.
+\\Now we have $x=110(13s+5)+9=1430s+559$.
+\\559 is a vaild value for $x$.
 
+\newpage
 \subsection{4.3.20.b}
 Find $x\in\mathbb{Z}$ such that\
 \\$x\equiv2\pmod{14}$,
 \\$x\equiv16\pmod{21}$, and
 \\$x\equiv10\pmod{30}$.
 \\
+\\We derive an equivalent, minimal set of congruences
+using the Chinese remainder theorem.
+\\$x\equiv2\pmod{2}$
+\\$x\equiv2\pmod{7}$
+\\$x\equiv16\pmod{3}$
+\\$x\equiv16\pmod{7}$
+\\$x\equiv10\pmod{2}$
+\\$x\equiv10\pmod{3}$
+\\$x\equiv10\pmod{5}$
+\\These reduce to:
+\\$x\equiv0\pmod{2}$,
+\\$x\equiv1\pmod{3}$,
+\\$x\equiv0\pmod{5}$,
+\\$x\equiv2\pmod{7}$.
+\\
+\\Using the first congruence,
+\\Let $q \in \mathbb{Z}$ where $x=2q$.
+\\Substituting into the second congruence,
+\\$2q \equiv 1 \pmod{3}$.
+\\It follows that $q \equiv 2 \pmod{3}$.
+\\Let $r \in \mathbb{Z}$ where $q=3r+2$.
+\\Now we have $x=2(3r+2)=6r+4$.
+\\Substituting into the third congruence,
+\\$6r + 4 \equiv 0 \pmod{5}$.
+\\It follows that $r \equiv 1 \pmod{5}$.
+\\Let $s \in \mathbb{Z}$ where $r=5s+1$.
+\\Now we have $x=6(5s+1)+4=30s+10$.
+\\Substituting into the fourth congruence,
+\\$30s + 10 \equiv 2 \pmod{7}$.
+\\It follows that $s \equiv (\bar{2})(6) \equiv 3 \pmod{7}$.
+\\Let $t \in \mathbb{Z}$ where $s=7t+3$.
+\\Now we have $x=30(7t+3)+10=210t+100$.
+\\Thus any $x \in S$ where
+$S = \{x \mid 210t+100 $\;\;$\forall t \in \mathbb{Z}\}$
+will be a solution to the congruence.
 
+\newpage
 \subsection{4.3.20.e}
 Find $x\in\mathbb{Z}$ such that\
 \\$x\equiv7\pmod{9}$,
-\\$x\equiv2\pmod{10}$, and
-\\$x\equiv3\pmod{12}$.
+\\$x\equiv2\pmod{10}$,
+\\$x\equiv3\pmod{12}$, and
 \\$x\equiv6\pmod{15}$.
 \\
+\\We derive an equivalent, minimal set of congruences
+using the Chinese remainder theorem.
+\\$x\equiv7\pmod{9}$
+\\$x\equiv2\pmod{2}$
+\\$x\equiv2\pmod{5}$
+\\$x\equiv3\pmod{3}$
+\\$x\equiv3\pmod{4}$
+\\$x\equiv6\pmod{3}$
+\\$x\equiv6\pmod{5}$
+\\These reduce to:
+\\$x\equiv0\pmod{2}$,
+\\$x\equiv0\pmod{3}$,
+\\$x\equiv3\pmod{4}$,
+\\$x\equiv1\pmod{5}$,
+\\$x\equiv2\pmod{5}$,
+\\$x\equiv7\pmod{9}$.
+\\
+\\There are no solutions to this contradictory set of congruences.
+(The intersection of the system is the null set).
 
+\newpage
 \subsection{4.3.32}
 Show that the system 
 \\$x\equiv1\pmod{2}$,
@@ -46,9 +119,80 @@ Show that the system
 \\$x\equiv22\pmod{24}$
 \\is a covering set of congruences.
 \\
-
-\subsection{4.3.36}
-Find all solutions of the congruence $x^2+6x-31\equiv0\pmod{2^33^25^2}$.
+\\We derive an equivalent set of congruences
+using the Chinese remainder theorem.
+\\$x\equiv1\pmod{2}$,
+\\$x\equiv0\pmod{4}$,
+\\$x\equiv0\pmod{3}$,
+\\$x\equiv2\pmod{3}$,
+\\$x\equiv2\pmod{4}$,
+\\$x\equiv2\pmod{8}$,
+\\$x\equiv22\pmod{3}$,
+\\$x\equiv22\pmod{8}$.
+\\These reduce to:
+\\$x\equiv1\pmod{2}$,
+\\$x\equiv0\pmod{3}$,
+\\$x\equiv1\pmod{3}$,
+\\$x\equiv2\pmod{3}$,
+\\$x\equiv0\pmod{4}$,
+\\$x\equiv2\pmod{4}$,
+\\$x\equiv2\pmod{8}$,
+\\$x\equiv6\pmod{8}$.
 \\
+\\The union of:
+\\$x\equiv0\pmod{3}$,
+\\$x\equiv1\pmod{3}$,
+\\$x\equiv2\pmod{3}$
+\\is $U$, the universal set of all integers.
+\\Therefore the system is a covering set of congruences.
+\\
+
+\newpage
+\subsection{4.3.36}
+Find all solutions of the congruence $x^2+6x-31\equiv0\pmod{2^33^2}$.
+\\
+\\$x^2+6x-31\equiv0\pmod{2^3}$.
+\\$x^2+6x+9\equiv0\pmod{8}$
+\\$(x+3)^2\equiv0\pmod{8}$.
+\\$\therefore x\equiv1\pmod{8}$ or
+\\$x\equiv5\pmod{8}$.
+\\These are equivalent to the congruence $x\equiv1\pmod{4}$.
+\\
+\\$x^2+6x-31\equiv0\pmod{3^2}$.
+\\$x^2-3x-4\equiv0\pmod{9}$
+\\$(x-4)(x+1)\equiv0\pmod{9}$.
+\\$\therefore x\equiv4\pmod{9}$ or
+\\$x\equiv8\pmod{9}$.
+\\
+\\We want the intersection of the modulo 8 and modulo 9 solutions:
+\\$x\equiv1\pmod{4}$ and
+\\$x\equiv4\pmod{9}$ or $x\equiv8\pmod{9}$.
+\\This is equivalent to:
+\\$x\equiv1\pmod{4}$ and $x\equiv4\pmod{9}$ or
+\\$x\equiv1\pmod{4}$ and $x\equiv8\pmod{9}$.
+\\Now we solve the systems of congruences.
+\\
+\\$x\equiv1\pmod{4}$,
+\\$x\equiv4\pmod{9}$.
+\\Using the first congruence,
+\\Let $q \in \mathbb{Z}$ where $x=4q+1$.
+\\Substituting into the second congruence,
+\\$4q + 1 \equiv 4 \pmod{9}$.
+\\It follows that $q \equiv (\bar{4})(3) \equiv 3 \pmod{9}$.
+\\Let $r \in \mathbb{Z}$ where $q=9r+3$.
+\\Now we have $x=4(9r+3)+1=36r+13$.
+\\
+\\$x\equiv1\pmod{4}$,
+\\$x\equiv8\pmod{9}$.
+\\Using the first congruence,
+\\Let $q \in \mathbb{Z}$ where $x=4q+1$.
+\\Substituting into the second congruence,
+\\$4q + 1 \equiv 8 \pmod{9}$.
+\\It follows that $q \equiv (\bar{4})(7) \equiv 4 \pmod{9}$.
+\\Let $r \in \mathbb{Z}$ where $q=9r+4$.
+\\Now we have $x=4(9r+4)+1=36r+17$.
+\\
+\\Therefore, the solution set is $\{x \mid x \equiv 13 \pmod{36}$
+or $x \equiv 17 \pmod{36}\}$
 
 \end{document}
