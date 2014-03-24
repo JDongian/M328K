@@ -21,22 +21,63 @@ Find all solutions of $x^8-x^4+1001 \equiv 0 \pmod{539}$.
 $x^8-x^4+462 \equiv 0 \pmod{11}$
 \\We first find solutions to the first congruence.
 \\$x^8-x^4+21 \equiv 0 \pmod{7^2}$
-\\
+\\First, we find solutions to $x^8-x^4+21 \equiv 0 \pmod{7}$
+\\$x^8-x^4 \equiv 0 \pmod{7}$
+\\$x^4(x^4-1) \equiv 0 \pmod{7}$
+\\The soultions modulo 7 are 0, 1, and 6.
+\\To see if solutions lift, we can use Hansel's Lemma.
+\\$f(x) = x^8-x^4+21$.
+\\$f'(x) = 8x^7-4x^3 \equiv x^7-4x^3 \pmod7$.
+\\$f'(0) \equiv 0 \pmod7$.
+\\$f(0) \not\equiv 0 \pmod{49}$.
+\\$\therefore x \equiv 0 \pmod 7$ does not lift modulo 49.
+\\$f'(1) \equiv 1-4 \equiv -3 \pmod7$.
+\\$f(1) \equiv 1-1+21 \equiv 21 \pmod49$.
+\\$\therefore x \equiv 1 \pmod 7$ lifts to 8 modulo 49.
+\\$f'(-1) \equiv (-1)-(-4) \equiv 3 \pmod7$.
+\\$f(-1) \equiv 1-1+21 \equiv 21 \pmod7$.
+\\$\therefore x \equiv 1 \pmod 7$ lifts to 41 modulo 49.
 \\
 \\We now find solutions to the second congruence.
 \\$x^8-x^4+0 \equiv 0 \pmod{11}$
 \\$x^4(x^4-1) \equiv 0 \pmod{11}$
-\\$\therefore x \equiv 
+\\$\therefore x \equiv 0, 1, 10 \pmod{11}$
+\\
+\\The intersection is found by solving the linear system of congruences.
+\\Therefore, the solution set is $\{x \mid x \equiv 8 \pmod{49}$ or
+$x \equiv 41 \pmod{49}\}$
 
 \newpage
 \subsection{4.4.10}
-Find $x\in\mathbb{Z}$ such that\
+Find all solutions of $x^5+x-6 \equiv 0 \pmod{2^43^2}$.
 \\
-
-\subsection{4.4.10}
-
-\subsection{4.6.2.b}
+\\We first find soultions to $x^5+x-6 \equiv 0 \pmod{2^4}$ and $x^5+x-6 \equiv 0 \pmod{3^2}$
+\\$x^5+x-6 \equiv 0 \pmod{2^4}$
+\\$x^5+x-6 \equiv 0 \pmod{3^2}$.
+\\Solving the first congruence:
+\\$x^5+x+2 \equiv 0 \pmod{4}$
+\\By observation, 0 is not a solution, but 1, 2, and 3 are modulo 4.
+\\For some $t \in \mathbb{Z}$, $(4t+1)^5+(4t+1)-6 \equiv 1+20t+4t-5
+\equiv 8t-4 \equiv 0 \pmod{16}$. But this is never true, thus 1 does not lift.
+\\By trying all the rest of the possible solutions, we find that
+x is 3, 6, or 11 modulo 16.
+\\
+\\Solving the second congruence:
+\\By observation, 0, 1, -1, 2, and -2 are not solutions. 
+\\$3^5+3-6 = 81(3)+3-6 = 240$. 3 is not a solution.
+\\$(-3)^5-3-6 = -(240+12) = 252$. -3 is a solution. (2+5+2 = 9)
+\\$(4)^5+4-6 = 256(4)-2 = 800+200+22$. 4 is not a solution.
+\\$(5)^5+5-6 = 625(5)-1 = 3000+124$. 5 is not a solution.
+\\
+\\Solving the system:
+\\$x \equiv 6 \pmod9
+\\x \equiv 3, 6, 11 \pmod{16}$.
+\\x is in the form $6+144t$, $51+144t$, or $123+144t$ for any $t \in \mathbb{Z}$.
 
 \subsection{5.1.2}
+Determine the highest power of 2 that divides 1423408.
+\\
+$1423408 = 711704(2) = 355852(2^2) = 177926(2^3) = 88963(2^4)$.
+The highest power of 2 is 16.
 
 \end{document}
