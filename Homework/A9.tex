@@ -2,6 +2,7 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{centernot}
+\setlength{\parindent}{0in}
 
 \begin{document}
 
@@ -16,23 +17,28 @@ then $(n-1)! \equiv 0 \pmod{n}$
 \\
 \\If n is composite, then there two possibilities:
 \\Case 1:
-\\There exist different prime integers a and b where $ab = n$ 
+\\$\exists a,b \in \textbf{P}$ where $ab = n$ 
 and $2 \le a < b \le n-2$.
-\\Both a and b are in the product $(ab-1)!$.
-\\Therefore $(ab-1)!$ is divisible by ab.
+\\$(ab-1)! =
+1\cdot2\cdot3\cdot\ldots\cdot a \cdot\ldots b \cdot\ldots\cdot (ab-1)
+\rightarrow ab \mid (ab-1)!$
 \\
 \\Case 2:
-\\If n cannot be expressed as a product of two different primes,
-then n is a square where $n = p^2$.
-\\p appears in the factorial product of $(n-1)!$, therefore $p \mid (n-1)!$.
-\\We can say $2p \mid (n-1)!$ if $2p < n$,
-which is true for all squares where $n \neq 4$.
-\\If $2p \mid (n-1)!$ and $p \mid (n-1)!$, then $2p^2 \mid (n-1)!$.
-\\Therefore $2n \mid (n-1)!$.
-\\Therefore $n \mid (n-1)!$.
+\\$\nexists a,b \in \textbf{P}$ where $ab = n$ and $2 \le a < b \le n-2
+\rightarrow \exists p \in \textbf{P}$ where $p^2 = n$.
+\\Since $n>p$, $(n-1)! =
+1\cdot2\cdot3\cdot\ldots\cdot p \cdot\ldots\cdot (n-1)$.
+\\$\therefore p \mid (n-1)!$
 \\
-\\Therefore, $(n-1)! \equiv 0 \pmod{n}$ for all composites n, $n\neq4$.
-\newpage
+\\Since $n \neq 4$ and all positive squares are greater than 4, $2p < n$.
+\\$\therefore (n-1)! =
+1\cdot2\cdot3\cdot\ldots\cdot 2p \cdot\ldots\cdot (n-1)$.
+\\$\therefore 2p \mid (n-1)! \rightarrow
+2p^2 \mid (n-1)! \rightarrow
+2n \mid (n-1)! \rightarrow
+n \mid (n-1)!$
+\\
+\\$\therefore (n-1)! \equiv 0 \pmod{n}$ for all composites n, $n\neq4$.
 
 \subsection{6.1.22}
 Show that $30 \mid (n^9 - n)$\;\;$ \forall n \in \mathbb{Z}^+$.
@@ -41,8 +47,9 @@ Show that $30 \mid (n^9 - n)$\;\;$ \forall n \in \mathbb{Z}^+$.
 \\30 \mid n(n-1)(n+1)(n^2+1) \rightarrow
 \\30 \mid n(n-1)(n+1)(n^2+1)(n^4+1) \rightarrow
 \\30 \mid (n^9 -n)$.
-\\
-\\$n(n-1)$ forms a sequence of three consecutive integers.
+\\We now are left to prove that 2, 3, and 5 divide $n(n-1)(n+1)(n^2+1)$.
+\newpage
+ $n(n-1)$ forms a sequence of two consecutive integers.
 \\Therefore, one of them must divide 2
 (this could be trivially shown with an enumeration of possibilities
 in the form $2q+r$).
@@ -77,7 +84,6 @@ then $1+a+a^2+...+a^{\varphi(m)-1}\equiv0\pmod{m}$.
 by Euler's totient theorem, given $a > 1$.
 \\$\therefore 1+a+a^2+...+a^{\varphi(m)-1}\equiv0\pmod{m}$
 \;\;$\forall a, m \in \mathbb{Z}^+$, $(a,m)=(a-1,m)=1$.
-\newpage
 
 \subsection{6.3.10}
 Show that $a^{\varphi(b)}+b^{\varphi(a)}\equiv1\pmod{ab}$ given $a \perp b$.
