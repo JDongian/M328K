@@ -13,15 +13,41 @@
 
 \subsection{7.1.6}
 Find all $n \in \mathbb{Z}^+$ such that $\varphi(n)=24$.
+\\
+\\n must be either prime or composite.
+\\Case 1:
+\\$n \in \textbf{P} \rightarrow n = \varphi(n)+1$
+\\$\therefore n = 24+1 = 25$
+\\But 25 is not prime.
+\\Therefore, n is not prime.
+\\Case 2:
+\\$\exists a,b \in \mathbb{Z}^+$ such that $ab = n$ and $a \perp b$.
+\\This implies that $\varphi(n) = \varphi(a)\varphi(b)$
+\\Therefore $(a, b)$ must be in the set of factors of 24:
+\\$(a,b) \in \{(1,24), (2,12), (3,8), (4,6)\}$ (without loss of generality)
+\\We can eliminate (1,24) because any solutions will be duplicate.
+\\We can eliminate (2,12) because 2 and 12 are not coprime.
+\\We can eliminate (3,8) because no number has a Euler totient value of 3.
+\\Calculating the values of the totient function yeilds:
+\\\[1,1,2,2,4,2,6,4,6,4,10,4,12,6,8,8,16,6,18,8,12,10,22,8,20,12,18,12,29,8\]
+\\$\therefore n = ab$
+\;\;$\forall (a,b) \in \{5, 8, 10, 12\} \times \{7, 9, 14, 18\}$.
+\\Explicitly enumerated:
+\\\[35, 45, 56, 70, 70, 72, 84, 90, 90, 108, 112, 140, 144, 168, 180, 216\]
 
 \subsection{7.1.14}
 Find all $n \in \mathbb{Z}^+$ such that $\varphi(n) \mid n$.
+\\
 
 \subsection{7.1.20}
 Let $p \in \textbf{P}$.
 Show that $p \nmid n$,
 where $n \in \mathbb{Z}^+$
 iff $\varphi(np) = (p-1)\varphi(n)$.
+\\
+\\$\varphi(p) = (p-1)$.
+\\$\varphi(np) = (p-1)\varphi(n) \rightarrow n \perp p$.
+\\$\therefore p \nmid n$.
 
 \subsection{7.1.32}
 Show that $m, n \in \mathbb{Z}^+, m \mid n \rightarrow
